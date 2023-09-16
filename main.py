@@ -11,7 +11,6 @@ from langchain.embeddings.openai import OpenAIEmbeddings
 #For surfing a csv file instead of manually converting xslx to txt
 from langchain.document_loaders import CSVLoader
 #For .env keys
-from dotenv import load_dotenv
 # The easy document loader for text
 from langchain.document_loaders import TextLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -95,8 +94,6 @@ def pdf_to_text(pdf_doc):
     return raw_text
 
 def main():
-
-    load_dotenv()
     #Setting uo streamlit for GUI:
     st.set_page_config(page_title="Document Q&A ")
     st.header("Document Q&A")
