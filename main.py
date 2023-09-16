@@ -154,8 +154,6 @@ def main():
                     file.write(raw_text)
                 loader = TextLoader(text_file)
                 doc = loader.load()
-                st.write("your pdf file: :point_down:")
-                st.text(raw_text)
                 #Split the document up:
                 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200, separators="\n", length_function=len)
                 input_type = text_splitter.split_documents(doc)
